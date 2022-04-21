@@ -1,6 +1,6 @@
 {
-  "short_name": "Master Details App",
-  "name": "Master Details App powered by Github Public APIs",
+  "short_name": "rick-and-morty-tv-character-app",
+  "name": "Rick and Morty TV character app powered by GitHub Public APIs",
   "icons": [
     {
       "src": "favicon.ico",
