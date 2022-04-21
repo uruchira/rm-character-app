@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+import Card from '../components/Card';
+
 import useAxios from '../hooks/useAxios';
 
 const Characters = () => {
@@ -8,11 +10,20 @@ const Characters = () => {
 
   const renderCharacterList = () => {
     if (response) {
-      return response.results.map(({ id, name }) => (
-        <Link key={id} to={`/${id}`}>
-          {name}
-        </Link>
-      ));
+      return response.results.map(
+        ({ id, image, name, status, species, origin, location }) => (
+          <Link key={id} to={`/${id}`}>
+            <Card
+              image={image}
+              name={name}
+              status={status}
+              species={species}
+              origin={origin.name}
+              location={location?.name}
+            />
+          </Link>
+        )
+      );
     } else {
       return '';
     }

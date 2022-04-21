@@ -4,8 +4,8 @@
 }
 
 body {
-  background-color: #fff;
-  color: #333;
+  background-color: rgb(36, 40, 47);
+  color: #fff;
   font-family: 'Roboto', Arial, sans-serif;
   font-size: 14px;
   line-height: normal;
@@ -15,4 +15,5 @@ body {
 
 a {
   display: block;
+  text-decoration: none;
 }

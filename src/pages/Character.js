@@ -10,13 +10,18 @@ const Character = () => {
 
   const renderCharacterDetails = () => {
     if (response) {
-      const { name, status, species } = response;
+      const { name, image, status, species, gender, origin, location } =
+        response;
       return (
         <>
           <h3>{name}</h3>
           <div>
+            <img src={image} alt={name} />
             <p>{status}</p>
             <p>{species}</p>
+            <p>{gender}</p>
+            <p>{origin.name}</p>
+            <p>{location.name}</p>
           </div>
         </>
       );
