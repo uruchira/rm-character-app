@@ -8,7 +8,6 @@ export const CardWrapper = styled.article`
   overflow: hidden;
   background: rgb(60, 62, 68);
   border-radius: 0.5rem;
-  margin: 0.75rem;
   width: 576px;
 `;
 

@@ -36,7 +36,7 @@ export const LogoLink = styled(Link)`
 export const MainWrapper = styled.main`
   background-color: rgb(36, 40, 47);
   min-height: 80vh;
-  padding: 8.25rem 0 2.5rem;
+  padding: 8.25rem 0 3rem;
   width: 100%;
 `;
 
@@ -50,6 +50,9 @@ export const CharacterGrid = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  & a {
+    margin: 0.75rem;
+  }
 `;
 
 export const CharacterInfo = styled.div`
@@ -57,6 +60,7 @@ export const CharacterInfo = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
+  padding: 0.5rem 0;
   & img {
     border-radius: 0.5rem;
     height: 300px;
@@ -65,9 +69,9 @@ export const CharacterInfo = styled.div`
 `;
 
 export const LoadingWrapper = styled.div`
-  align-items: flex-start;
+  align-items: center;
   display: flex;
   justify-content: center;
   padding-top: 100px;
-  height: 500px;
+  height: 77vh;
 `;

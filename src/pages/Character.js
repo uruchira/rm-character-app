@@ -1,6 +1,7 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
 
+import Loading from '../components/Loading';
 import useAxios from '../hooks/useAxios';
 
 import { CharacterInfo } from '../styles/layout';
@@ -32,7 +33,7 @@ const Character = () => {
   return (
     <>
       {loading ? (
-        <div>Loading...</div>
+        <Loading />
       ) : error ? (
         error.message
       ) : (
