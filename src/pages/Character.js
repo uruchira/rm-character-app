@@ -4,25 +4,51 @@ import { useParams } from 'react-router-dom';
 import Loading from '../components/Loading';
 import useAxios from '../hooks/useAxios';
 
-import { CharacterInfo } from '../styles/layout';
+import {
+  CharacterInfo,
+  CharacterInfoHeader,
+  CharacterInfoIdSection,
+  CharacterInfoStatus,
+  CharacterInfoBody
+} from '../styles/layout';
 
 const Character = () => {
   const { id } = useParams();
   const [loading, error, response] = useAxios(id);
 
+  const renderSpeciesText = (species, gender) => {
+    return `This Rick and Morty TV show character is a ${species.toLowerCase()} and it's gender is ${gender.toLowerCase()}.`;
+  };
+
+  const renderOriginText = (origin) => {
+    return origin ? ` Its origin is ${origin.name}.` : '';
+  };
+
+  const renderLocationText = (location) => {
+    return location
+      ? ` The last known location of this character is ${location.name}.`
+      : '';
+  };
+
   const renderCharacterDetails = () => {
     if (response) {
-      const { name, image, status, species, gender, origin, location } =
+      const { id, name, image, status, species, gender, origin, location } =
         response;
       return (
         <>
-          <h1>{name}</h1>
+          <CharacterInfoHeader>{name}</CharacterInfoHeader>
           <img src={image} alt={name} />
-          <p>{status}</p>
-          <p>{species}</p>
-          <p>{gender}</p>
-          <p>{origin.name}</p>
-          <p>{location.name}</p>
+          <CharacterInfoIdSection>
+            <i>#{id}</i>
+            <CharacterInfoStatus status={status.toLowerCase()}>
+              {status.toLowerCase()}
+            </CharacterInfoStatus>
+          </CharacterInfoIdSection>
+          <CharacterInfoBody>
+            {renderSpeciesText(species, gender)}
+            {renderOriginText(origin)}
+            {renderLocationText(location)}
+          </CharacterInfoBody>
         </>
       );
     } else {

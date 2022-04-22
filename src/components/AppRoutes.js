@@ -1,17 +1,11 @@
 import React, { lazy, Suspense } from 'react';
 import { Routes, Route, Outlet } from 'react-router-dom';
 
+import Loading from '../components/Loading';
+
 const CharacterPage = lazy(() => import('../pages/Character'));
 const CharactersPage = lazy(() => import('../pages/Characters'));
 const NoMatchPage = lazy(() => import('../pages/NoMatchPage'));
-
-const Loading = () => {
-  return (
-    <div>
-      <p>Loading...</p>
-    </div>
-  );
-};
 
 const Layout = () => {
   return <Outlet />;

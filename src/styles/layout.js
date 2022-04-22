@@ -2,6 +2,8 @@ import { Link } from 'react-router-dom';
 
 import styled from '@emotion/styled';
 
+import { STATUSES } from '../constants';
+
 export const HeaderWrapper = styled.section`
   background-color: #fff;
   height: 120px;
@@ -55,7 +57,7 @@ export const CharacterGrid = styled.div`
   }
 `;
 
-export const CharacterInfo = styled.div`
+export const CharacterInfo = styled.section`
   align-items: center;
   display: flex;
   flex-direction: column;
@@ -64,8 +66,42 @@ export const CharacterInfo = styled.div`
   & img {
     border-radius: 0.5rem;
     height: 300px;
+    margin-bottom: 1rem;
     width: 300px;
   }
+`;
+
+export const CharacterInfoHeader = styled.h1`
+  margin: 1rem 0;
+  font-size: 2rem;
+`;
+
+export const CharacterInfoIdSection = styled.div`
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  width: 300px;
+  & i {
+    color: rgb(158, 158, 158);
+    font-style: normal;
+  }
+`;
+
+export const CharacterInfoStatus = styled.span`
+  background-color: ${(props) => STATUSES[props.status]};
+  border-radius: 0.2rem;
+  color: #fff;
+  font-size: 0.75rem;
+  padding: 3px 10px;
+  text-transform: capitalize;
+`;
+
+export const CharacterInfoBody = styled.p`
+  font-size: 1rem;
+  line-height: 1.25rem;
+  margin: 1rem 0;
+  width: 300px;
+  text-align: justify;
 `;
 
 export const LoadingWrapper = styled.div`
@@ -73,5 +109,5 @@ export const LoadingWrapper = styled.div`
   display: flex;
   justify-content: center;
   padding-top: 100px;
-  height: 77vh;
+  height: 70vh;
 `;
