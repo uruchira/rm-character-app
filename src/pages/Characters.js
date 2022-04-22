@@ -2,8 +2,9 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 import Card from '../components/Card';
-
 import useAxios from '../hooks/useAxios';
+
+import { CharacterGrid } from '../styles/layout';
 
 const Characters = () => {
   const [loading, error, response] = useAxios();
@@ -30,15 +31,15 @@ const Characters = () => {
   };
 
   return (
-    <div>
+    <>
       {loading ? (
         <div>Loading...</div>
       ) : error ? (
         error.message
       ) : (
-        <div>{renderCharacterList()}</div>
+        <CharacterGrid>{renderCharacterList()}</CharacterGrid>
       )}
-    </div>
+    </>
   );
 };
 

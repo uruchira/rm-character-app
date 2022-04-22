@@ -14,11 +14,7 @@ const Loading = () => {
 };
 
 const Layout = () => {
-  return (
-    <main>
-      <Outlet />
-    </main>
-  );
+  return <Outlet />;
 };
 
 function AppRoutes() {

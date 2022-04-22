@@ -3,9 +3,10 @@ import { useParams } from 'react-router-dom';
 
 import useAxios from '../hooks/useAxios';
 
+import { CharacterInfo } from '../styles/layout';
+
 const Character = () => {
   const { id } = useParams();
-
   const [loading, error, response] = useAxios(id);
 
   const renderCharacterDetails = () => {
@@ -14,15 +15,13 @@ const Character = () => {
         response;
       return (
         <>
-          <h3>{name}</h3>
-          <div>
-            <img src={image} alt={name} />
-            <p>{status}</p>
-            <p>{species}</p>
-            <p>{gender}</p>
-            <p>{origin.name}</p>
-            <p>{location.name}</p>
-          </div>
+          <h1>{name}</h1>
+          <img src={image} alt={name} />
+          <p>{status}</p>
+          <p>{species}</p>
+          <p>{gender}</p>
+          <p>{origin.name}</p>
+          <p>{location.name}</p>
         </>
       );
     } else {
@@ -31,15 +30,15 @@ const Character = () => {
   };
 
   return (
-    <div>
+    <>
       {loading ? (
         <div>Loading...</div>
       ) : error ? (
         error.message
       ) : (
-        <div>{renderCharacterDetails()}</div>
+        <CharacterInfo>{renderCharacterDetails()}</CharacterInfo>
       )}
-    </div>
+    </>
   );
 };
 

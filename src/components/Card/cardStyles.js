@@ -9,7 +9,7 @@ export const CardWrapper = styled.article`
   background: rgb(60, 62, 68);
   border-radius: 0.5rem;
   margin: 0.75rem;
-  width: 600px;
+  width: 576px;
 `;
 
 export const CardImage = styled.img`
