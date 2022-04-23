@@ -5,7 +5,7 @@ import Card from '../components/Card';
 import Loading from '../components/Loading';
 import useAxios from '../hooks/useAxios';
 
-import { CharacterGrid } from '../styles/layout';
+import { CharacterGrid } from '../styles';
 
 const Characters = () => {
   const [loading, error, response] = useAxios();

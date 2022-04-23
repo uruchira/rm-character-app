@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { CenteringSection } from '../styles/layout';
+import { CenteringSection } from '../styles';
 
 const NoMatchPage = () => {
   return (

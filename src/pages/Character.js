@@ -11,7 +11,7 @@ import {
   CharacterInfoIdSection,
   CharacterInfoStatus,
   CharacterInfoBody
-} from '../styles/layout';
+} from '../styles';
 
 const Character = () => {
   const { characterId } = useParams();

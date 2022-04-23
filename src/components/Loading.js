@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { CenteringSection } from '../styles/layout';
+import { CenteringSection } from '../styles';
 import loadingIcon from '../assets/loading.gif';
 
 function Loading() {

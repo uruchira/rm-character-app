@@ -5,7 +5,7 @@ import AppRoutes from './components/AppRoutes';
 import Header from './components/Header';
 
 import globalStyles from './styles/globalStyles';
-import { MainWrapper, MainContainer } from './styles/layout';
+import { MainWrapper, MainContainer } from './styles';
 
 const App = () => {
   return (
