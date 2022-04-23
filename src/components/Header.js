@@ -8,7 +8,7 @@ const Header = () => {
   return (
     <HeaderWrapper>
       <HeaderContainer>
-        <Link to="/">
+        <Link to="/characters">
           <img src={logoImage} alt="logo" />
         </Link>
       </HeaderContainer>

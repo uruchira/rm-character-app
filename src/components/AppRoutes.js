@@ -18,7 +18,8 @@ function AppRoutes() {
         <Route element={<Layout />}>
           <Route index element={<CharactersPage />} />
           <Route path="/" element={<CharactersPage />} />
-          <Route path="/:id" element={<CharacterPage />} />
+          <Route path="/characters" element={<CharactersPage />} />
+          <Route path="/characters/:characterId" element={<CharacterPage />} />
           <Route path="*" element={<NoMatchPage />} />
         </Route>
       </Routes>

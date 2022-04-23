@@ -14,7 +14,7 @@ const Characters = () => {
     if (response) {
       return response.results.map(
         ({ id, image, name, status, species, origin, location }) => (
-          <Link key={id} to={`/${id}`}>
+          <Link key={id} to={`/characters/${id}`}>
             <Card
               image={image}
               name={name}

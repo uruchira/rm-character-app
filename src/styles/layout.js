@@ -111,3 +111,22 @@ export const LoadingWrapper = styled.div`
   padding-top: 100px;
   height: 70vh;
 `;
+
+export const NoPageWrapper = styled.div`
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  height: 70vh;
+  & p {
+    text-align: center;
+    & span {
+      font-size: 8rem;
+      display: block;
+    }
+    & i {
+      font-style: normal;
+      font-size: 1rem;
+      text-transform: uppercase;
+    }
+  }
+`;

@@ -13,8 +13,8 @@ import {
 } from '../styles/layout';
 
 const Character = () => {
-  const { id } = useParams();
-  const [loading, error, response] = useAxios(id);
+  const { characterId } = useParams();
+  const [loading, error, response] = useAxios(characterId);
 
   const renderSpeciesText = (species, gender) => {
     return `This Rick and Morty TV show character is a ${species.toLowerCase()} and it's gender is ${gender.toLowerCase()}.`;

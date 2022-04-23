@@ -15,11 +15,7 @@ const useAxios = (paramData) => {
       setResponse(data);
       setError(null);
     } catch (error) {
-      if (error.message.split(' ').pop() === '404') {
-        setError({ message: 'Page not found: 404' });
-      } else {
-        setError(error);
-      }
+      setError(error);
     } finally {
       setLoading(false);
     }
