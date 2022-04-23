@@ -103,16 +103,31 @@ export const CenteringSection = styled.div`
   display: flex;
   justify-content: center;
   height: 80vh;
-  & p {
+  & section {
     text-align: center;
     & span {
       font-size: 8rem;
       display: block;
     }
+    & p {
+      color: rgb(158, 158, 158);
+      font-size: 1.25rem;
+      text-transform: capitalize;
+    }
     & i {
+      color: rgb(158, 158, 158);
+      font-size: 0.875rem;
       font-style: normal;
-      font-size: 1rem;
-      text-transform: uppercase;
+      display: block;
+      margin-top: 0.5rem;
     }
   }
+`;
+
+export const ErrorWrapper = styled.div`
+  align-items: center;
+  color: rgb(214, 61, 46);
+  display: flex;
+  flex-direction: column;
+  font-size: 1.25rem;
 `;

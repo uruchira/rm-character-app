@@ -5,10 +5,11 @@ import { CenteringSection } from '../styles/layout';
 const NoMatchPage = () => {
   return (
     <CenteringSection>
-      <p>
+      <section>
         <span>404</span>
-        <i>Sorry, &nbsp;Page not found</i>
-      </p>
+        <p>Sorry, &nbsp;Page not found</p>
+        <i>The page you requested could not be found</i>
+      </section>
     </CenteringSection>
   );
 };

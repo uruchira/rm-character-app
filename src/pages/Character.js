@@ -2,6 +2,7 @@ import React from 'react';
 import { useParams } from 'react-router-dom';
 
 import Loading from '../components/Loading';
+import ErrorMessage from '../components/ErrorMessage';
 import useAxios from '../hooks/useAxios';
 
 import {
@@ -56,12 +57,20 @@ const Character = () => {
     }
   };
 
+  function getErrorMessage(err) {
+    if (err.response) {
+      const { data } = err.response;
+      return data ? data.error : err.message;
+    }
+    return err.message;
+  }
+
   return (
     <>
       {loading ? (
         <Loading />
       ) : error ? (
-        error.message
+        <ErrorMessage text={getErrorMessage(error)} />
       ) : (
         <CharacterInfo>{renderCharacterDetails()}</CharacterInfo>
       )}
