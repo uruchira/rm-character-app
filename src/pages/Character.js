@@ -5,6 +5,8 @@ import Loading from '../components/Loading';
 import ErrorMessage from '../components/ErrorMessage';
 import useAxios from '../hooks/useAxios';
 
+import { getErrorMessage } from '../util';
+
 import {
   CharacterInfo,
   CharacterInfoHeader,
@@ -56,14 +58,6 @@ const Character = () => {
       return '';
     }
   };
-
-  function getErrorMessage(err) {
-    if (err.response) {
-      const { data } = err.response;
-      return data ? data.error : err.message;
-    }
-    return err.message;
-  }
 
   return (
     <>

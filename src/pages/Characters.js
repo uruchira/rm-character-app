@@ -3,7 +3,10 @@ import { Link } from 'react-router-dom';
 
 import Card from '../components/Card';
 import Loading from '../components/Loading';
+import ErrorMessage from '../components/ErrorMessage';
 import useAxios from '../hooks/useAxios';
+
+import { getErrorMessage } from '../util';
 
 import { CharacterGrid } from '../styles';
 
@@ -36,7 +39,7 @@ const Characters = () => {
       {loading ? (
         <Loading />
       ) : error ? (
-        error.message
+        <ErrorMessage text={getErrorMessage(error)} />
       ) : (
         <CharacterGrid>{renderCharacterList()}</CharacterGrid>
       )}
