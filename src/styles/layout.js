@@ -1,44 +1,37 @@
-import { Link } from 'react-router-dom';
-
 import styled from '@emotion/styled';
 
 import { STATUSES } from '../constants';
 
 export const HeaderWrapper = styled.section`
   background-color: #fff;
-  height: 120px;
+  border-top: 4px solid rgb(36, 40, 47);
   position: fixed;
+  right: 0;
   width: 100%;
+  top: 0;
+  z-index: 4;
 `;
 
 export const HeaderContainer = styled.div`
-  align-items: center;
   display: flex;
   flex-direction: row;
-  height: 120px;
   justify-content: center;
   margin: 0 auto;
   max-width: 1200px;
   width: 100%;
-  & img {
-    height: 120px;
+  & a {
+    align-items: center;
+    display: flex;
+    height: 118px;
   }
-`;
-
-export const LogoLink = styled(Link)`
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  height: 126px;
-  justify-content: center;
-  position: relative;
-  width: 133px;
+  & img {
+    height: 100px;
+  }
 `;
 
 export const MainWrapper = styled.main`
   background-color: rgb(36, 40, 47);
-  min-height: 80vh;
-  padding: 8.25rem 0 3rem;
+  padding: 8.25rem 0 0;
   width: 100%;
 `;
 
@@ -52,6 +45,7 @@ export const CharacterGrid = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  margin-bottom: 5rem;
   & a {
     margin: 0.75rem;
   }
@@ -104,19 +98,11 @@ export const CharacterInfoBody = styled.p`
   text-align: justify;
 `;
 
-export const LoadingWrapper = styled.div`
+export const CenteringSection = styled.div`
   align-items: center;
   display: flex;
   justify-content: center;
-  padding-top: 100px;
-  height: 70vh;
-`;
-
-export const NoPageWrapper = styled.div`
-  align-items: center;
-  display: flex;
-  justify-content: center;
-  height: 70vh;
+  height: 80vh;
   & p {
     text-align: center;
     & span {

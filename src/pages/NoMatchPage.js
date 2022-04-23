@@ -1,15 +1,15 @@
 import React from 'react';
 
-import { NoPageWrapper } from '../styles/layout';
+import { CenteringSection } from '../styles/layout';
 
 const NoMatchPage = () => {
   return (
-    <NoPageWrapper>
+    <CenteringSection>
       <p>
         <span>404</span>
         <i>Sorry, &nbsp;Page not found</i>
       </p>
-    </NoPageWrapper>
+    </CenteringSection>
   );
 };
 
