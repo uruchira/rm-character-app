@@ -9,7 +9,7 @@ const Header = () => {
     <HeaderWrapper>
       <HeaderContainer>
         <Link to="/characters">
-          <img src={logoImage} alt="logo" />
+          <img src={logoImage} alt="logo" height="100" />
         </Link>
       </HeaderContainer>
     </HeaderWrapper>

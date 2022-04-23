@@ -38,7 +38,7 @@ const Character = () => {
       return (
         <>
           <CharacterInfoHeader>{name}</CharacterInfoHeader>
-          <img src={image} alt={name} />
+          <img src={image} alt={name} width="300" />
           <CharacterInfoIdSection>
             <i>#{id}</i>
             <CharacterInfoStatus status={status.toLowerCase()}>

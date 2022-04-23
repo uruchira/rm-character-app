@@ -24,9 +24,6 @@ export const HeaderContainer = styled.div`
     display: flex;
     height: 118px;
   }
-  & img {
-    height: 100px;
-  }
 `;
 
 export const MainWrapper = styled.main`
@@ -45,7 +42,7 @@ export const CharacterGrid = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  margin-bottom: 5rem;
+  margin: 0.25rem 0 5rem;
   & a {
     margin: 0.75rem;
   }
@@ -59,9 +56,7 @@ export const CharacterInfo = styled.section`
   padding: 0.5rem 0;
   & img {
     border-radius: 0.5rem;
-    height: 300px;
     margin-bottom: 1rem;
-    width: 300px;
   }
 `;
 
@@ -98,7 +93,7 @@ export const CharacterInfoBody = styled.p`
   text-align: justify;
 `;
 
-export const CenteringSection = styled.div`
+export const CenterWrapper = styled.div`
   align-items: center;
   display: flex;
   justify-content: center;

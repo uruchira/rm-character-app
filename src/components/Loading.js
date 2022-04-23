@@ -1,13 +1,13 @@
 import React from 'react';
 
-import { CenteringSection } from '../styles';
+import { CenterWrapper } from '../styles';
 import loadingIcon from '../assets/loading.gif';
 
 function Loading() {
   return (
-    <CenteringSection>
+    <CenterWrapper>
       <img src={loadingIcon} alt="Loading Icon" width="48px" />
-    </CenteringSection>
+    </CenterWrapper>
   );
 }
 

@@ -13,7 +13,7 @@ import {
 const Card = ({ image, name, status, species, origin, location }) => {
   return (
     <CardWrapper>
-      <CardImage src={image} />
+      <CardImage src={image} width="200" />
       <CardInfo>
         <h1>{name}</h1>
         <CardStatusInfo>

@@ -12,10 +12,7 @@ export const CardWrapper = styled.article`
 `;
 
 export const CardImage = styled.img`
-  background-color: gray;
-  height: 200px;
   object-fit: cover;
-  width: 200px;
 `;
 
 export const CardStatusInfo = styled.div`
