@@ -21,8 +21,15 @@ export const HeaderContainer = styled.div`
   width: 100%;
   & a {
     align-items: center;
+    color: rgb(36, 40, 47);
     display: flex;
     height: 118px;
+    & h1 {
+      font-size: 1.875rem;
+    }
+    & img {
+      margin: 0 0.5rem;
+    }
   }
 `;
 

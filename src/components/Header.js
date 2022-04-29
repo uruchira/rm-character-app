@@ -9,7 +9,9 @@ const Header = () => {
     <HeaderWrapper>
       <HeaderContainer>
         <Link to="/characters">
+          <h1 data-testid="appNameOne">Rick</h1>
           <img src={logoImage} alt="logo" height="100" />
+          <h1 data-testid="appNameTwo">Morty</h1>
         </Link>
       </HeaderContainer>
     </HeaderWrapper>
