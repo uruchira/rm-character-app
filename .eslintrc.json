@@ -4,7 +4,12 @@
     "es2021": true,
     "jest/globals": true
   },
-  "extends": ["plugin:react/recommended", "standard", "prettier"],
+  "extends": [
+    "plugin:react/recommended",
+    "plugin:jest/recommended",
+    "standard",
+    "prettier"
+  ],
   "parserOptions": {
     "ecmaFeatures": {
       "jsx": true

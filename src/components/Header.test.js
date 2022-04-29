@@ -8,12 +8,14 @@ import Header from './Header';
 
 afterEach(cleanup);
 
-it('should have a text content called Rick', () => {
-  const { getByTestId } = render(<Header />, { wrapper: BrowserRouter });
-  expect(getByTestId('appNameOne')).toHaveTextContent('Rick');
-});
+describe('Testing Header  Component', () => {
+  test('should have a logo text called Rick', () => {
+    const { getByTestId } = render(<Header />, { wrapper: BrowserRouter });
+    expect(getByTestId('appNameOne')).toHaveTextContent('Rick');
+  });
 
-it('should have a text content called Morty', () => {
-  const { getByTestId } = render(<Header />, { wrapper: BrowserRouter });
-  expect(getByTestId('appNameTwo')).toHaveTextContent('Morty');
+  test('should have a logo text called Morty', () => {
+    const { getByTestId } = render(<Header />, { wrapper: BrowserRouter });
+    expect(getByTestId('appNameTwo')).toHaveTextContent('Morty');
+  });
 });
