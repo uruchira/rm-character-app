@@ -1,12 +1,10 @@
 import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
 
-import { render, cleanup } from '@testing-library/react';
-import '@testing-library/jest-dom/extend-expect';
+import { render } from '@testing-library/react';
+import '@testing-library/jest-dom';
 
 import Header from './Header';
-
-afterEach(cleanup);
 
 describe('Testing Header  Component', () => {
   test('should have a logo text called Rick', () => {

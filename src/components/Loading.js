@@ -6,7 +6,7 @@ import loadingIcon from '../assets/loading.gif';
 function Loading() {
   return (
     <CenterWrapper>
-      <img src={loadingIcon} alt="Loading Icon" width="48px" />
+      <img src={loadingIcon} alt="Loading..." width="48px" />
     </CenterWrapper>
   );
 }

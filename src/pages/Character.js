@@ -60,7 +60,7 @@ const Character = () => {
   };
 
   return (
-    <>
+    <div data-testid="character-details">
       {loading ? (
         <Loading />
       ) : error ? (
@@ -68,7 +68,7 @@ const Character = () => {
       ) : (
         <CharacterInfo>{renderCharacterDetails()}</CharacterInfo>
       )}
-    </>
+    </div>
   );
 };
 

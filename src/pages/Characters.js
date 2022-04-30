@@ -35,7 +35,7 @@ const Characters = () => {
   };
 
   return (
-    <>
+    <div data-testid="character-list">
       {loading ? (
         <Loading />
       ) : error ? (
@@ -43,7 +43,7 @@ const Characters = () => {
       ) : (
         <CharacterGrid>{renderCharacterList()}</CharacterGrid>
       )}
-    </>
+    </div>
   );
 };
 
